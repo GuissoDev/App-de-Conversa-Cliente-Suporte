@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "275934453323",
+    "project_id": "lord-seg-ccf8c",
+    "storage_bucket": "lord-seg-ccf8c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275934453323:android:7c84d5ee3b1b1ca5adf7ce",
+        "android_client_info": {
+          "package_name": "com.example.lordseg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjgM6O_L-FzGyEbYZykoIrPXhwcbsQw_I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/tela_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Actives.FragmentLogin">
+
+    <ImageView
+        android:id="@+id/ic_logo"
+        android:layout_width="@dimen/logo_size"
+        android:layout_height="@dimen/logo_size"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/container_components"
+        style="@style/ConteinerComponents"
+        android:layout_width="366dp"
+        android:layout_height="261dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_entrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ic_logo"
+        app:layout_constraintVertical_bias="0.312"
+        app:layout_constraintWidth_max="500dp" />
+
+    <EditText
+        android:id="@+id/edit_email"
+        style="@style/Edit_Text"
+        android:layout_marginTop="32dp"
+        android:drawableEnd="@drawable/ic_email"
+        android:hint="@string/EditEmail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@id/container_components"
+        app:layout_constraintStart_toStartOf="@id/container_components"
+        app:layout_constraintTop_toTopOf="@id/container_components"
+        app:layout_constraintWidth_default="spread" />
+
+    <EditText
+        android:id="@+id/edit_senha"
+        style="@style/Edit_Text"
+        android:layout_marginTop="16dp"
+        android:drawableEnd="@drawable/ic_eye"
+        android:hint="@string/EditSenha"
+        android:inputType="numberPassword"
+        app:layout_constraintEnd_toEndOf="@id/container_components"
+        app:layout_constraintStart_toStartOf="@id/container_components"
+        app:layout_constraintTop_toBottomOf="@id/edit_email"
+        app:layout_constraintWidth_default="spread" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_entrar"
+        style="@style/Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Entrar"
+        app:layout_constraintStart_toStartOf="@id/container_components"
+        app:layout_constraintEnd_toEndOf="@id/container_components"
+        app:layout_constraintTop_toBottomOf="@id/edit_senha"
+        app:layout_constraintBottom_toBottomOf="@id/container_components" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:indeterminateTint="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_components"/>
+
+    <TextView
+        android:id="@+id/text_tela_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="@string/text_cadastro"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressbar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

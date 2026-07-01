@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dimensões padrão para Telefones -->
+    <dimen name="container_width">0dp</dimen> <!-- 0dp significa que vai preencher o ConstraintLayout com margens -->
+    <dimen name="container_margin">20dp</dimen>
+    <dimen name="edit_text_margin_side">40dp</dimen>
+    <dimen name="logo_size">200dp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="chat_bubble_max_width">280dp</dimen>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_add_user"
+        android:icon="@drawable/ic_adduser"
+        android:title="Adicionar Usuário"
+        app:showAsAction="always"
+        app:tint="@color/white" />
+</menu>

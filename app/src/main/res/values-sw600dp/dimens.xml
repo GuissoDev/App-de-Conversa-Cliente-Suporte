@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dimensões para Tablets (7 polegadas ou mais) e Desktops -->
+    <dimen name="container_width">500dp</dimen> <!-- Largura fixa centralizada para não esticar muito -->
+    <dimen name="container_margin">40dp</dimen>
+    <dimen name="edit_text_margin_side">20dp</dimen>
+    <dimen name="logo_size">250dp</dimen>
+    <dimen name="text_size_large">22sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="chat_bubble_max_width">450dp</dimen>
+</resources>

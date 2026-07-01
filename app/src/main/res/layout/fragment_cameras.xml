@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_cameras"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        android:clipToPadding="false" />
+
+    <!-- Formulário para Adicionar Câmera -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_add_camera"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:translationZ="10dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp"
+        app:cardBackgroundColor="#1A1A1A">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/text_titulo_add_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adicionar Nova Câmera"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <EditText
+                    android:id="@+id/edit_camera_tipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tipo (Ex: Quintal, Sala)"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#80FFFFFF"
+                    android:backgroundTint="#FFFFFF"
+                    android:inputType="textCapSentences" />
+
+                <EditText
+                    android:id="@+id/edit_camera_ip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="IP da Câmera (Ex: 192.168.1.10)"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#80FFFFFF"
+                    android:backgroundTint="#FFFFFF"
+                    android:inputType="text"
+                    android:layout_marginTop="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <EditText
+                        android:id="@+id/edit_camera_user"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Usuário"
+                        android:text="admin"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#80FFFFFF"
+                        android:backgroundTint="#FFFFFF" />
+
+                    <EditText
+                        android:id="@+id/edit_camera_pass"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Senha"
+                        android:text="Lordseg2025"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#80FFFFFF"
+                        android:backgroundTint="#FFFFFF"
+                        android:inputType="textPassword" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edit_camera_port"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Porta (Padrão: 554)"
+                    android:text="554"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#80FFFFFF"
+                    android:backgroundTint="#FFFFFF"
+                    android:inputType="number"
+                    android:layout_marginTop="8dp" />
+
+                <EditText
+                    android:id="@+id/edit_camera_path"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Caminho (Ex: /live/ch0 ou /11)"
+                    android:text="/cam/realmonitor?channel=1&amp;subtype=0"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#80FFFFFF"
+                    android:backgroundTint="#FFFFFF"
+                    android:layout_marginTop="8dp" />
+
+                <Button
+                    android:id="@+id/btn_salvar_camera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Adicionar"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#008577" />
+
+                <Button
+                    android:id="@+id/btn_cancelar_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cancelar"
+                    android:backgroundTint="#808080"
+                    style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="24dp"
+        android:src="@android:drawable/ic_input_add"
+        app:tint="#FFFFFF"
+        android:backgroundTint="#008577" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_tela_cheia"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:visibility="gone">
+
+        <androidx.media3.ui.PlayerView
+            android:id="@+id/player_view_fullscreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:use_controller="false" />
+
+        <!-- Overlay de informações da câmera -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/text_data_hora_full"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:text="00-00-0000 00:00:00"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2" />
+
+            <TextView
+                android:id="@+id/text_camera_label_full"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Camera 01"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2" />
+
+            <ImageView
+                android:id="@+id/btn_mute_full"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:src="@android:drawable/ic_lock_silent_mode_off"
+                app:tint="#FFFFFF"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_fechar_fullscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltar para Grade"
+            android:layout_margin="16dp"
+            android:layout_gravity="top|end"
+            android:backgroundTint="#80000000"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

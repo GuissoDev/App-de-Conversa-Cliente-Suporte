@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF1A1A1A</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Paleta Clean & Secure (Verdes Sóbrios) -->
+    <color name="Green">#2D6A4F</color> <!-- Verde Esmeralda Escuro (Profissional) -->
+    <color name="OfGreen">#409167</color> <!-- Verde Médio para estados secundários -->
+    <color name="light_green">#D8F3DC</color> <!-- Verde muito claro para fundos/detalhes -->
+
+    <!-- Tons de Destaque -->
+    <color name="Orange">#1B4332</color> <!-- Mantendo o nome mas usando um tom de suporte mais escuro -->
+    <color name="Ofwhite">#F8F9FA</color> <!-- Cinza quase branco para fundos limpos -->
+
+    <!-- Cores Modernas para o Chat -->
+    <color name="chat_sent_bg">#B7E4C7</color> <!-- Verde menta suave -->
+    <color name="chat_received_bg">#FFFFFF</color>
+    <color name="chat_timestamp">#6C757D</color>
+
+    <!-- Cores para a Splash Screen e Identidade -->
+    <color name="primary_dark">#081C15</color> <!-- Verde Petróleo quase preto (Máxima Segurança) -->
+    <color name="primary_green_dark">#1B4332</color>
+    <color name="main_background_green">#1E4D3A</color> <!-- Verde escuro, mas mais claro e aberto que o anterior -->
+    <color name="card_background_light_green">#2A5A44</color> <!-- Verde intermediário para os cards -->
+</resources>

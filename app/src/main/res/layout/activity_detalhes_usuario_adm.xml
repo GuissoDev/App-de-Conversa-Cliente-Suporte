@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_user_adm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background_green">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_detalhes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_dark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/back_ic"
+        app:navigationIconTint="@color/white"
+        app:title="Detalhes do Usuário"
+        app:titleTextColor="@color/white" />
+
+    <View
+        android:id="@+id/containeruser"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:background="@drawable/container_user"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_detalhes"
+        />
+
+    <ImageView
+        android:id="@+id/img_perfil_adm"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/ic_person"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@id/containeruser"
+        app:layout_constraintEnd_toEndOf="@id/containeruser"
+        app:layout_constraintTop_toTopOf="@id/containeruser"
+        app:layout_constraintBottom_toBottomOf="@id/containeruser"/>
+
+    <TextView
+        android:id="@+id/text_user_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/containeruser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <View
+        android:id="@+id/card_detalhes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/conteiner_components"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_user_header"
+        app:layout_constraintBottom_toBottomOf="@id/btn_excluir"
+        app:layout_constraintWidth_max="500dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="-40dp"
+        />
+
+    <ImageView
+        android:id="@+id/ic_user_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_person"
+        app:tint="@color/Green"
+        app:layout_constraintStart_toStartOf="@id/card_detalhes"
+        app:layout_constraintTop_toTopOf="@id/card_detalhes"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="25dp"/>
+
+    <TextView
+        android:id="@+id/text_user"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/ic_user_icon"
+        app:layout_constraintBottom_toBottomOf="@id/ic_user_icon"
+        app:layout_constraintStart_toEndOf="@id/ic_user_icon"
+        app:layout_constraintEnd_toEndOf="@id/card_detalhes"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <ImageView
+        android:id="@+id/ic_email_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_email"
+        app:tint="@color/Green"
+        app:layout_constraintStart_toStartOf="@id/card_detalhes"
+        app:layout_constraintTop_toBottomOf="@id/ic_user_icon"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="25dp"/>
+
+    <TextView
+        android:id="@+id/text_EmailUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/ic_email_icon"
+        app:layout_constraintBottom_toBottomOf="@id/ic_email_icon"
+        app:layout_constraintStart_toEndOf="@id/ic_email_icon"
+        app:layout_constraintEnd_toEndOf="@id/card_detalhes"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"/>
+
+    <ImageView
+        android:id="@+id/ic_phone_icon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_phone"
+        app:tint="@color/Green"
+        app:layout_constraintStart_toStartOf="@id/card_detalhes"
+        app:layout_constraintTop_toBottomOf="@id/ic_email_icon"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"/>
+
+    <LinearLayout
+        android:id="@+id/phone_layout_adm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="@id/ic_phone_icon"
+        app:layout_constraintBottom_toBottomOf="@id/ic_phone_icon"
+        app:layout_constraintStart_toEndOf="@id/ic_phone_icon"
+        app:layout_constraintEnd_toEndOf="@id/card_detalhes"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+55 "
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/text_PhoneUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_excluir"
+        style="@style/Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Excluir Usuário"
+        android:background="@drawable/button_delete_gradient"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@id/card_detalhes"
+        app:layout_constraintEnd_toEndOf="@id/card_detalhes"
+        app:layout_constraintTop_toBottomOf="@id/phone_layout_adm"
+        app:layout_constraintWidth_default="spread"
+        android:layout_marginHorizontal="25dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

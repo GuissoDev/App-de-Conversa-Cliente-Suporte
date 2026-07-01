@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Lord Seg</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="EditEmail">Email</string>
+    <string name="EditSenha">Senha</string>
+    <string name="text_cadastro">Clique aqui para se cadastrar</string>
+    <string name="EditNome">Nome</string>
+    <string name="EditTelefone">Telefone</string>
+    <string name="PesquisarUsuario">Digite aqui para pesquisar</string>
+</resources>
